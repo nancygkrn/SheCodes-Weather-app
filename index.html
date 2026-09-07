@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <title>My weather application</title>
+
+  </head>
+  <body class="weather-app">
+    <header>
+      <form>
+        <div class="city-search">
+          <input type="search" placeholder="Enter a city.." required />
+        </div>
+        <div class="Search">
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+    </header>
+    <hr />
+    <main>
+      <div class="current-weather">
+        <div>
+          <h1>Paris</h1>
+          <p id="current-date">
+            Saturday 15:32, moderate rain <br />
+            Humidity: <strong class="strong-1">87%</strong>, Wind:
+            <strong class="strong-2">7.2km/h</strong>
+          </p>
+        </div>
+        <div class="current-temp-group">
+          <div class="current-emoji">☀️</div>
+          <div class="current-temperature">14</div>
+          <div class="degrees">°C</div>
+        </div>
+      </div>
+    </main>
+    <hr />
+    <footer>
+      <p>
+        This project was coded by
+        <a
+          href="https://www.shecodes.io/graduates/186934-athanasia-gkirini"
+          target="_blank"
+          >Nancy G</a
+        >
+        and is <a href="https://github.com" target="_blank"> on GitHub</a> and
+        <a href="https://www.netlify.com/" target="_blank">hosted on Netlify</a>
+      </p>
+    </footer>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="src/javascript.js"></script>
+  </body>
+</html>
