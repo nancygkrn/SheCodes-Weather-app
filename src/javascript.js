@@ -1,4 +1,4 @@
-//Show current date
+//Show current date for the weather app
 let currentDate = new Date();
 let days = [
   "Sunday",
