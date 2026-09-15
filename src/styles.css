@@ -2,10 +2,10 @@ form {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: start;
   justify-content: flex-start;
   gap: 10px;
 }
+
 hr {
   border: 1px solid #f9f7fe;
   margin: 10px 0;
@@ -26,8 +26,9 @@ footer {
 .weather-app {
   background: white;
   max-width: 600px;
+  width: 90%;
   margin: 60px auto;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
@@ -61,19 +62,27 @@ footer {
 }
 
 .current-emoji {
-  width: 44px;
-  margin-right: 40px;
+  width: 88px;
+}
+
+.current-emoji img {
+  width: 100%;
+  display: block;
 }
 
 .current-temperature {
-  font-size: 60px;
+  font-size: 50px;
   margin: 0;
 }
 
 .degrees {
-  font-size: 30px;
+  font-size: 25px;
   align-self: flex-start;
   margin-top: 10px;
+}
+
+.city-search {
+  flex: 1;
 }
 
 .city-search input {
@@ -82,7 +91,7 @@ footer {
   border-radius: 3px;
   font-size: 16px;
   background: #f9f7fe;
-  width: 400px;
+  width: 100%;
 }
 
 .Search input {
