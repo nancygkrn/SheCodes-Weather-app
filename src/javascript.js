@@ -19,7 +19,7 @@ let currentMin =
 let dateElement = document.querySelector("#current-date");
 dateElement.innerHTML = `${currentDay} ${currentHour}:${currentMin}, <span id="description"></span> <br />
   Humidity: <span id="humidity">87%</span>, Wind:
-  <span id="windSpeed">7.2km/h</span>`;
+  <span id="windSpeed">7.2 km/h</span>`;
 
 //Search Input
 function handleSearch(event) {
@@ -43,6 +43,10 @@ function handleSearch(event) {
     console.log(response.data.wind.speed);
     let windSpeedElement = document.querySelector("#windSpeed");
     windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
+    //Add weather icon
+    console.log(response.data.condition.icon_url);
+    let iconElement = document.querySelector("#icon");
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
   }
 
   //Get city and temperature data through Axios
