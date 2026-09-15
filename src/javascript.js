@@ -17,7 +17,7 @@ let currentMin =
     : currentDate.getMinutes(); //Looked it up using claude because I could not find a way to convert the minutes with a leading zero
 
 let dateElement = document.querySelector("#current-date");
-dateElement.innerHTML = `${currentDay} ${currentHour}:${currentMin}, moderate rain <br />
+dateElement.innerHTML = `${currentDay} ${currentHour}:${currentMin}, <span id="description"></span> <br />
   Humidity: <strong class="strong-1">87%</strong>, Wind:
   <strong class="strong-2">7.2km/h</strong>`;
 
@@ -31,6 +31,10 @@ function handleSearch(event) {
   function displayTemperature(response) {
     let temperature = Math.round(response.data.temperature.current);
     document.querySelector(".current-temperature").innerHTML = temperature;
+    //Add weather description
+    console.log(response.data.condition.description);
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = response.data.condition.description;
   }
 
   //Get city and temperature data through Axios
