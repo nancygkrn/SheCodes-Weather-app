@@ -61,7 +61,8 @@ footer {
 }
 
 .current-emoji {
-  font-size: 40px;
+  width: 44px;
+  margin-right: 40px;
 }
 
 .current-temperature {
