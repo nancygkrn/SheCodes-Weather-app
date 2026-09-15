@@ -43,12 +43,14 @@ footer {
   color: #a8a6b4;
 }
 
-.strong-1 {
+#humidity {
   color: red;
+  font-weight: bold;
 }
 
-.strong-2 {
+#windSpeed {
   color: red;
+  font-weight: bold;
 }
 
 .current-temp-group {

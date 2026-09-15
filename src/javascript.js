@@ -18,8 +18,8 @@ let currentMin =
 
 let dateElement = document.querySelector("#current-date");
 dateElement.innerHTML = `${currentDay} ${currentHour}:${currentMin}, <span id="description"></span> <br />
-  Humidity: <strong class="strong-1">87%</strong>, Wind:
-  <strong class="strong-2">7.2km/h</strong>`;
+  Humidity: <span id="humidity">87%</span>, Wind:
+  <span id="windSpeed">7.2km/h</span>`;
 
 //Search Input
 function handleSearch(event) {
@@ -35,6 +35,14 @@ function handleSearch(event) {
     console.log(response.data.condition.description);
     let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = response.data.condition.description;
+    //Add weather humidity
+    console.log(response.data.temperature.humidity);
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+    //Add wind speed
+    console.log(response.data.wind.speed);
+    let windSpeedElement = document.querySelector("#windSpeed");
+    windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
   }
 
   //Get city and temperature data through Axios
